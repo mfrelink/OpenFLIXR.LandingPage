@@ -118,23 +118,6 @@
 <body onload="checkServer()" class="offline">
     <div class="hidden-sm hidden-xs navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <div class="row-fluid" style="top:0;right:3%;position: fixed;">
-                <ul class="dropdown-menu-left">
-                    <a href="#" class="dropdown-toggle col-md-1 pull-right" data-toggle="dropdown" style="right: 1vw;"><h2><span class="fa fa-bars"></span></h2></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/setup" target="_blank"><span class="fa fa-sliders" style="padding-right: 15px;"></span>Setup</a></li>
-                        <li class="divider" style="background-color: #4a4a4a;"></li>
-                        <li><a href="/support" target="_blank"><span class="fa fa-hashtag" style="padding-right: 15px;"></span>Chat</a></li>
-                        <li class="divider" style="background-color: #4a4a4a;"></li>
-                        <li><a href="http://www.openflixr.com/forum" target="_blank"><span class="fa fa-comments-o" style="padding-right: 15px;"></span>Forums</a></li>
-                        <li class="divider" style="background-color: #4a4a4a;"></li>
-                        <li><a href="https://github.com/mfrelink/OpenFLIXR.OnlineUpdate" target="_blank"><span class="fa fa-github" style="padding-right: 15px;"></span>Github</a></li>
-                        <li class="divider" style="background-color: #4a4a4a;"></li>
-                        <li><a href="https://www.paypal.me/openflixr" target="_blank"><span class="fa fa-life-ring" style="padding-right: 15px;"></span>Donate</a></li>
-                    </ul>
-                </ul>
-            </div>
-
             <div class="hidden-md hidden-lg hidden-sm hidden-xs col-md-10 col-md-offset-2" style="top:1vh;">
                 <div class="col-md-2"><img class="netdata-badge" src="/netdata/api/v1/badge.svg?chart=system.cpu&label=CPU&precision=1&after=-60&units=%20%25&value_color=grey:null|%231abc9c<75|%23F1C40F<85|%23E74C3C<100|%23235cbde0"></img>
                 </div>
@@ -151,6 +134,23 @@
     </div>
 
     <div class="container" id="link-bar">
+
+        <div class="row" style="top:25px;right:3%;position:fixed;z-index:5;">
+            <ul class="dropdown-menu-left">
+                <a href="#" class="dropdown-toggle col-md-1 pull-right" data-toggle="dropdown" style="right: 1vw;"><h2><span class="fa fa-bars"></span></h2></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/setup" target="_blank"><span class="fa fa-sliders" style="padding-right: 15px;"></span>Setup</a></li>
+                    <li class="divider" style="background-color: #4a4a4a;"></li>
+                    <li><a href="/support" target="_blank"><span class="fa fa-hashtag" style="padding-right: 15px;"></span>Chat</a></li>
+                    <li class="divider" style="background-color: #4a4a4a;"></li>
+                    <li><a href="http://www.openflixr.com/forum" target="_blank"><span class="fa fa-comments-o" style="padding-right: 15px;"></span>Forums</a></li>
+                    <li class="divider" style="background-color: #4a4a4a;"></li>
+                    <li><a href="https://github.com/mfrelink/OpenFLIXR.OnlineUpdate" target="_blank"><span class="fa fa-github" style="padding-right: 15px;"></span>Github</a></li>
+                    <li class="divider" style="background-color: #4a4a4a;"></li>
+                    <li><a href="https://www.paypal.me/openflixr" target="_blank"><span class="fa fa-life-ring" style="padding-right: 15px;"></span>Donate</a></li>
+                </ul>
+            </ul>
+        </div>
 
         <div class="row mt centered">
             <div class="col-md-4 animated fadeInLeft">
@@ -179,12 +179,12 @@
         </div>
     </div>
 
-    <div id="headerwrap">
+    <div id="headerwrap" class="container hidden-sm hidden-xs">
         <div class="container hidden-sm hidden-xs">
             <div class="row">
 
                 <div>
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+                    <div id="myCarousel" class="carousel" data-ride="carousel" data-interval="10000">
                         <!-- Carousel indicators -->
                         <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -192,15 +192,15 @@
                         </ol>
                         <!-- Wrapper for carousel items -->
                         <div class="carousel-inner">
-                            <div class="item active">
+                            <div class="item active animated fadeIn" style="padding-top:5px;">
 
 
                                 <div class="col-md-6">
 
                                     <h1><br/>
-                                        <center>Server status</h1></center>
+																				<center>Server status</h1></center>
                                     <center>
-                                        <h4 id="server-status-msg" style="color:#1abc9c"><img src="assets/img/puff.svg">   Checking...</h4></center>
+                                        <h4 id="server-status-msg" style="color:#1abc9c"><img src="assets/img/puff.svg">	 Connecting...</h4></center>
                                     <br/>
                                     <br/>
                                     <br/>
@@ -215,24 +215,11 @@
 
 
                             </div>
-                            <div class="item ">
+                            <div class="item animated fadeIn">
 
-                                <div class="col-md-6">
 
-                                    <h1><br/>
-                                        <center>Server status</h1></center>
-                                    <center>
-                                        <h4 id="server-status-msg" style="color:#1abc9c"><img src="assets/img/puff.svg">   Checking...</h4></center>
-                                    <br/>
-                                    <br/>
-                                    <br/>
-                                    <form class="form-inline" role="form">
-                                        <div class="form-group">
-
-                                        </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <img id="server-status-img" class="img-responsive" src="assets/img/checking.png">
+                                <div class="embed-responsive embed-responsive-16by9" style="text-align:c‌​enter">
+                                    <iframe style="border:none;" class="embed-responsive-item" width="100%" height="500" src="/latest"></iframe>
                                 </div>
 
 
@@ -263,16 +250,16 @@
         </div>
         <div class="container-fluid ">
 
-            <div class="col-md-5 " style="margin-top:27px; margin-bottom:10p; ">
-                <span style="color:#7b7b7b; padding-left: 1vw; "><i class="fa fa-cube " style="color:#7b7b7b;font-size: 1.2em; "></i><a style="color:#bfbfbf " href="http://openflixr.com " target="_blank ">OpenFLIXR </a>Media Server </span><span class="label label-success ">1.5.0</span>
+            <div class="col-md-5 " style="margin-top:27px; margin-bottom:10px; ">
+                <span style="color:#7b7b7b; padding-left: 1vw; "><i class="fa fa-cube " style="color:#7b7b7b;font-size: 1.2em; "></i><a style="color:#bfbfbf " href="http://openflixr.com " target="_blank ">OpenFLIXR </a>Media Server </span><span class="label label-info ">1.5.0</span>
             </div>
 
             <div class="col-md-6 hidden-sm hidden-xs ">
             </div>
 
-            <div class="hidden-sm hidden-xs col-md-3 pull-right " style="width: 5%;right:1vw; ">
+            <div class="hidden-sm hidden-xs col-md-3 pull-right " style="width: 5%;padding-right:1vw;top:2px;">
                 <h2><i class="fa fa-html5 aria-hidden="true" style="color:#7b7b7b;"></i>
-                                    </h2>
+																		</h2>
             </div>
 
         </div>
